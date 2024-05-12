@@ -1,0 +1,92 @@
+:root
+{
+    /* Claro */
+    --cor-fundo-claro: rgb(255,255,255);
+    --cor-botao-claro: rgb(200, 200, 200);
+    
+    /* Escuro */
+    --cor-fundo-escuro: rgb(25, 25, 25);
+    --cor-botao-escuro: rgb(40, 40,40);
+}
+
+html
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body 
+{
+    transition: background-color 0.5s ease;
+}
+
+.conteiner
+{
+    display: flex;
+    background-color: rgb(30, 30, 30);
+    border-radius: 2vb;
+    width: 40vw;
+    height: 90vh;
+}
+
+.botao
+{
+    margin: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.cb
+{
+    display: none;
+}
+
+.btn
+{
+    display: block;
+    width: 6vw;
+    height: 3vw;
+	border-radius: 10vw;
+    cursor: pointer;
+    background-color: var(--cor-botao-escuro);
+    padding: 2px;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+.btn::after{
+    background-color: var(--cor-botao-claro);
+    left: 1px;
+    border-radius: 100%;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: block;
+    content: "";
+    transition: all 0.5s ease;
+}
+
+.cb:checked + .btn {
+    background-color: var(--cor-botao-claro);
+    
+}
+
+.cb:checked + .btn::after, .btn::before {
+    left: 50%;
+    background-color: var(--cor-botao-escuro);
+}
+
+@media only screen and (max-width: 800px) {
+    .conteiner {
+        width: 80vw;
+    }
+
+    .btn {
+        width: 16vw;
+        height: 8vw;
+    }
+}
