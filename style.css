@@ -1,12 +1,14 @@
 :root
 {
     /* Claro */
-    --cor-fundo-claro: rgb(255,255,255);
+    --cor-fundo-claro: rgb(200, 200, 220);
     --cor-botao-claro: rgb(200, 200, 200);
+    --cor-card-claro: rgb(255,255,255);
     
     /* Escuro */
     --cor-fundo-escuro: rgb(25, 25, 25);
     --cor-botao-escuro: rgb(40, 40,40);
+    --cor-card-escuro: rgb(30, 30, 30);
 }
 
 html
@@ -26,10 +28,12 @@ body
 .conteiner
 {
     display: flex;
-    background-color: rgb(30, 30, 30);
-    border-radius: 2vb;
+    background-color: var(--cor-card-claro);
+    border-radius: 1vb;
     width: 40vw;
     height: 90vh;
+    transition: background-color 0.5s ease;
+    
 }
 
 .botao
@@ -37,7 +41,8 @@ body
     margin: 8%;
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
 }
 
 .cb
@@ -72,7 +77,6 @@ body
 
 .cb:checked + .btn {
     background-color: var(--cor-botao-claro);
-    
 }
 
 .cb:checked + .btn::after, .btn::before {
@@ -80,7 +84,7 @@ body
     background-color: var(--cor-botao-escuro);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     .conteiner {
         width: 80vw;
     }

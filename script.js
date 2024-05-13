@@ -11,4 +11,7 @@ checkboxInput.addEventListener('change', function() {
 function verificaCaixa(checkbox) {
     const corFundo = checkbox.checked ? 'var(--cor-fundo-escuro)' : 'var(--cor-fundo-claro)';
     document.body.style.backgroundColor = corFundo;
+    const conteiner = document.querySelector('.conteiner');
+    const corcard = checkbox.checked ? 'var(--cor-card-escuro)' : 'var(--cor-card-claro)';
+    conteiner.style.backgroundColor = corcard
 }
