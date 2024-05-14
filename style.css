@@ -48,7 +48,7 @@ html
 
 .contatos
 {
-    padding: 2vh 5vw;
+    padding: 3vh;
 }
 
 .contatos img
@@ -60,12 +60,12 @@ html
 {
     display: flex;
     align-items: center;
-    padding-top: 2vh;
+    justify-content: space-between;
+    padding: 1vh 3vw;
 }
 
 .contatos span
 {
-    padding-left: 5vw;
     font-family: sans-serif;
 }
 
@@ -80,13 +80,12 @@ html
     margin-top: 5vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .redes img
 {
-    max-width: 15%;
-    padding-right: 35vw;
+    max-width: 10%;
 }
 
 .redes div a
@@ -109,5 +108,10 @@ html
     .image img
     {
         max-width: 40%;
-    };
+    }
+
+    .redes img
+    {
+        max-width: 15%;
+    }
 }
